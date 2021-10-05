@@ -1,4 +1,6 @@
 > 一般来说在一面或者二面，BFC和清除浮动经常一起考
+>
+> ⚠️一手英文资料才是权威
 
 ## BFC是什么？
 
@@ -12,13 +14,11 @@
 
 - `<html>`根元素
 
-- `float`的值不为`none`
+- `float`的值为`left`或`right`
 
   ```css
   float: left;
   float: right;
-  float: inline-start;
-  float: inline-end;
   ```
 
 - `overflow`的值为`auto`、`scroll`或`hidden`
@@ -44,22 +44,28 @@
   position: fixed;
   ```
 
-  
+## body上加上`overflow:hidden`为什么没形成BFC阻止body下移?
+
+https://segmentfault.com/q/1010000002645174
+
+https://www.zhihu.com/question/35030317
+
+https://www.w3.org/TR/CSS2/visuren.html#block-formatting
 
 - [ ] 小红书｜BFC与清除浮动
-- [ ] 小红书｜怎么理解 BFC？如何触发 BFC？
-- [ ] 小红书｜BFC的理解、如何触发
-- [ ] 网易｜你有用到BFC，它是什么？怎么才能触发BFC呢？
+- [x] 小红书｜怎么理解 BFC？如何触发 BFC？
+- [x] 小红书｜BFC的理解、如何触发
+- [x] 网易｜你有用到BFC，它是什么？怎么才能触发BFC呢？
 - [ ] 字节跳动｜BFC与float元素相互覆盖吗？
 - [ ] 字节跳动｜实现`三栏布局`, 用`float + BFC`和`flex`两种方式
 - [ ] 网易｜浮动？清楚浮动方式？BFC?
 - [ ] 转转｜BFC 还可以解决什么问题？
-- [ ] 美团｜BFC介绍一下
-- [ ] 小鹅通｜讲讲BFC
-- [ ] 百度｜介绍BFC
+- [x] 美团｜BFC介绍一下
+- [x] 小鹅通｜讲讲BFC
+- [x] 百度｜介绍BFC
 - [ ] 百度｜BFC的实现及应用
-- [ ] 蔚来汽车｜如何触发BFC
-- [ ] 什么是BFC? 详细说说
+- [x] 蔚来汽车｜如何触发BFC
+- [x] 什么是BFC? 详细说说
 - [ ] shopee虾皮｜bfc概念和作用
 - [ ] 字节跳动｜BFC，什么是BFC，有什么作用，应用场景
 - [ ] 米哈游｜BFC有什么用？BFC化有哪一些方法？

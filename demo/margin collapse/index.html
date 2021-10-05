@@ -5,25 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>margin collapse</title>
   <style>
+    body {
+      float: right;
+      outline: 5px dashed #264653; 
+    }
     .line-one {
-      margin-bottom: 50px;
+      margin: 30px 0 50px 0;
+      outline: 5px dashed #e76f51;
     }
     .line-two {
       margin: 30px 0 50px 0;
-      border: 5px solid #e76f51;
-      outline: 5px dashed #f4a261;
+      /* border: 5px solid #e76f51;*/
+      outline: 5px dashed #f4a261; 
+      overflow: visible;
     } 
     .line-three {
       margin-top: 30px;
-      border: 5px solid #264653;
-      outline: 5px dashed #2a9d8f;
+      /* border: 5px solid #264653;*/
+      outline: 5px dashed #2a9d8f; 
       position: fixed;
+    }
+    .child {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <p class='line-one'>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.</p>
-  <p class='line-two'>This does not happen on left and right margins! Only top and bottom margins!</p>
-  <p class='line-three'>outline</p>
+  <div class='line-one'>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.</div>
+  <div class='line-two'>
+    <div class='child'>this is normal flow</div>
+    <div>this is normal flow</div>
+  </div>
+  <div class='line-three'>
+    <div class='child'>this is bfc</div>
+    <div>this is bfc</div>
+  </div>
 </body>
 </html>
