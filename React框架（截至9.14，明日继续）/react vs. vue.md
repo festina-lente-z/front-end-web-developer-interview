@@ -1,0 +1,10 @@
+- [ ] 京东｜react的hooks与vue的hooks区别
+- [ ] 恒生｜vue和react的区别
+- [ ] 恒生｜vue和reactdiff算法不同，具体是哪里不同
+- [ ] 东方财富｜说说Vue的双向数据流和React的单向数据流是怎样实现的？  Vue：Observer 、 Dep 、Watch Vue2通过defineProperty，Vue3通过Proxy React：balabala~ 
+- [ ] 东方财富｜Vue和React中都用了虚拟DOM，你说下什么是虚拟DOM，两个框架间有什么区别？
+- [ ] 东方财富｜Vue和React中组件间数据传递有哪些常用的？  props emit provide inject eventBus Vuex     React: props context redux.....
+- [ ] 东方财富｜Vue和React使用过哪些优化手段？ vue：v-for加key v-for v-if不一起使用。。。  react： shouldComponentUpdate、PureComponent、memo
+- [ ] 赛码网｜Redux 与 Vuex
+- [ ] 招银网络科技｜vue和react我看你都写在项目经历上了，你能说下两者的数据流的区别么？以及好处？   vue 双向 react单向，单向更容易最终数据变化的源头，出现错误时容易定位，双向绑定快捷方便，不需要自己触发依赖项的修改，Vue使用时能精准的感知到数据的变化以及需要通知的地方，因而Vue1.x中并未采用虚拟dom，直接以这种方式精准感知需要通知改变的依赖项，但是内存消耗较大，故Vue2折中引入了虚拟dom。
+- [ ] 招银网络科技｜一般你们使用的性能优化手段都有哪些呢？  打包、缓存、gzip、图片压缩、css属性（transform不会触发reflow。。，还有默认硬件加速）、css选择器（层级不要太深）、框架层级的如react的pureComponent、shouldComponentUpdate、memo，vue的v-if/v-for不一起用、路由懒加载等等。。。
