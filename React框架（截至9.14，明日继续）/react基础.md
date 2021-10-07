@@ -1,6 +1,14 @@
+## JSX语法转换
+
+> react JSX 语法转换 （JSX => React.createElement => 虚拟Dom对象 => 真实DOM）
+
+参考：https://pomb.us/build-your-own-react/
+
+## 牛客网面经
+
 - [ ] 字节｜React 里组件间怎么通信的（集中式，消息发布-订阅，父子单向流通）
 
-- [ ] 字节｜React.createElement(name, props, children)
+- [ ] 字节｜React.createElement(name, props, children)（JSX转换）
 
   JSON 数据渲染为DOM，函数格式为
 
@@ -54,7 +62,7 @@
 
 - [ ] 美团｜React是怎么渲染的
 
-- [ ] 微步在线｜react JSX 语法转换 （JSX => React.createElement => 虚拟Dom对象 => 真实DOM）
+- [x] 微步在线｜react JSX 语法转换 （JSX => React.createElement => 虚拟Dom对象 => 真实DOM）
 
 - [ ] 微步在线｜react stack React 16 前的底层架构
 
@@ -79,6 +87,8 @@
 - [ ] AfterShip｜一道场景题：有一个组件，传入 props，当 props 发生改变的时候，执行一个函数 。我说使用在生命周期函数 componentDidUpdate 的时候触发。面试官问，在 react hook 中怎么实现。我的回答是将 props 作为 useCallback 的依赖项，面试官说不对。后来他说一种最简单的方法是将 props 使用 state 存起来，之后再 useEffect 的时候，比较后面传入的 props，进行触发。
 
 - [ ] 字节｜React解决了什么问题
+
+- [ ] 字节｜react事件绑定的方式以及其区别
 
 - [ ] 顺丰｜react合成事件的优点，事件绑定在哪里
 
