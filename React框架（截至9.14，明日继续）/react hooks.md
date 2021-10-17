@@ -70,3 +70,13 @@
 - [ ] 转转｜讲一下`useEffect`
 
 - [ ] 绿盟｜hooks讲一讲
+
+- [ ] 字节｜简单讲讲对 hooks 的理解
+
+- [ ] 字节｜Hooks 如何模拟类组件生命周期
+
+- [ ] 字节｜实现 useMemo
+
+- [ ] 字节｜实现 useScroll
+
+- [ ] 字节｜hook 的实现原理？ (我说 hook 类似细粒度的 fiber，解释了一下几个 api 的主要实现，提了一下 useLayoutEffect 和 useEffect 的执行时机的差异等等，然后重点说了 hook 的意义。)

@@ -102,3 +102,39 @@
 
 - [ ] 绿盟｜组件间通信 怎么修改子组件的props
 
+- [ ] 字节｜实现react render函数
+
+  ```javascript
+  function render( vnode, container ) {
+  // 当vnode为字符串时，渲染结果是一段文本
+  if ( typeof vnode === 'string' ) {
+  const textNode = document.createTextNode( vnode );
+  return container.appendChild( textNode );
+  }
+  const dom = document.createElement( vnode.tag );
+  if ( vnode.attrs ) {
+  Object.keys( vnode.attrs ).forEach( key => {
+  if ( key === 'className' ) key = 'class';            // 当属性名为className时，改回class
+  dom.setAttribute( key, vnode.attrs[ key ] )
+  } );
+  }
+  vnode.children.forEach( child => render( child, dom ) );    // 递归渲染子节点
+  return container.appendChild( dom );    // 将渲染结果挂载到真正的DOM上
+  }
+  babel 转义后代码什么样子
+  ```
+
+- [ ] 字节｜react15 16 差异 生命周期的变化以及为什么会变？react fiber
+
+- [ ] 字节｜合成事件机制？（回答了事件委托以及 react 是如何模拟事件冒泡以及事件捕获的。）
+
+- [ ] 字节｜react组件间通信
+
+- [ ] 字节｜react key 有了解吗
+
+- [ ] 字节｜react为什么要用setState()
+
+- [ ] 字节｜react ref用法
+
+- [ ] 百度｜react事件绑定原理？
+
