@@ -1,0 +1,5 @@
+class jQuery {
+  constructor(selector) {
+    
+  }
+}

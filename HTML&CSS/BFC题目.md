@@ -3,10 +3,10 @@
 > ⚠️一手英文资料才是权威
 
 ## BFC是什么？
-
 - BFC（Block Formatting Context）块级格式化上下文
 
 - 当元素在页面上水平或垂直排布时，它们之间如何相互影响，CSS有几套不同的规则，其中一套规则叫做**格式化上下文**（Formatting Context）。BFC是适用于**块级盒子**叠放的一套规则。
+- A formatting context is the environment into which a set of related boxes are laid out.
 
 - BFC规则：
 

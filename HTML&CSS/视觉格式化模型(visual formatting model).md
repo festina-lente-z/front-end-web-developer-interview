@@ -44,6 +44,10 @@
 |`atomic inline-level box`|**原子行内级盒子**|不参与行内格式化上下文创建的行内级盒子。原子行内级盒子一开始叫做原子行内盒子（atomic inline box），后被修正。原子行内级盒子的内容不会拆分成多行显示|
 |`replaced element`|**可替换元素**|[可替换元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element)|
 
+## block box,block container box,block-level box关系
+- block container box（块容器盒子）
+  - 元素是非可替换元素(non-replaced element)
+  - `display: block|list-item|inline-block`
 # 定位方案(positioning scheme)
 ## 普通流(normal flow)
 > normal flow的翻译别名有很多，目前遇到的有：“文档流”、“常规流”、“普通流”、“正常流”
