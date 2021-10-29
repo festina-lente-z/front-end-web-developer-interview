@@ -1,3 +1,4 @@
+# CSS布局
 ## 盒模型的宽度如何计算
 ### 如下代码，请问`div1`的`offsetWidth`是多大？
 ```html
@@ -93,3 +94,53 @@ Flex 是 Flexible Box的缩写，意为”弹性布局“，用来为盒状模�
 - `flex-wrap`：是否换行
 #### 项目的属性
 - `align-self`：子元素在交叉轴上的对齐方式
+
+# CSS定位
+## absolute和relative分别依据什么定位？
+### relative依据自身定位
+### absolute依据最近一层的定位元素定位
+- 定位元素
+  - absolute、relative、fixed
+  - body
+
+## 居中对齐有哪些实现方式？
+### 水平居中
+- inline元素：`text-align: center`（text-align CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。text-align 并不控制块元素自己的对齐，只控制它的行内内容的对齐。）
+- block元素：`margin: auto`
+- absolute元素：`left: 50%` + `margin-left`负值
+### 垂直居中
+- inline元素：`line-height`的值等于`height`值
+- absolute元素：`top: 50%` + `margin-top`负值（必须要知道子元素的宽和高！）
+- absolute元素：`transfrom: translate(-50%, -50%)`(水平垂直居中)
+- absolute元素：`top`,`left`,`bottom`,`right`=0 + `margin: auto`
+### 垂直居中
+
+# CSS图文样式
+## line-height如何继承
+### line-height如何继承
+- 写具体数值，如30px，则继承该值
+- 写比例，如2，1.5，则继承该比例
+- 写百分比，如200%，则继承计算出来的值
+
+# CSS响应式
+## rem是什么？
+rem是一个长度单位
+- px，绝对长度单位，最常用
+- em，相对长度单位，相对于父元素，不常用
+- rem，相对长度单位，相对于根元素，常用于响应式布局
+## 响应式布局的常见方案？
+- media-query，根据不同的屏幕宽度设置根元素font-size
+- rem，基于根元素的相对单位
+
+## vw/vh
+- rem弊端
+  - 阶梯性
+### 网页视口尺寸
+- `window.screen.height`：屏幕高度
+- `window.innerHeight`：网页视口高度
+- `document.body.clientHeight`：body高度
+
+### vw/vh
+- vh 网页视口高度的1/100
+- vw 网页视口宽度的1/100
+- vmax取两者最大值；vmin取两者最小值
