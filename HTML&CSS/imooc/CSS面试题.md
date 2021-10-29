@@ -29,14 +29,67 @@
   margin: 10px;
 }
 ```
-
-
 ## margin纵向重叠的问题
+### 如下代码，AAA 和 BBB 之间的距离是多少？
+```html
+<p>AAA</p>
+<p></p>
+<p></p>
+<p></p>
+<p>BBB</p>
+```
+```css
+p {
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+```
+- 相邻元素的`margin-top`和`margin-bottom`会发生重叠
+- 空白内容的`<p></p>`也会重叠
+- 答案：15px
 
 ## margin负值的问题
+### `margin-top`、`margin-right`、`margin-bottom`、`margin-left`分别设置负值会怎么样？
+- `margin-top`负值，元素向上移动
+- `margin-left`负值，元素向左移动
+- `margin-right`负值，右侧元素左移，自身不受影响
+- `margin-bottom`负值，下方元素上移，自身不受影响
+????好像还要分情况考虑
 
 ## BFC的理解和应用
+### 什么是BFC?
+- Block Format Context，块级格式化上下文
+- 一块独立渲染区域，内部元素的渲染不会影响边界以外的元素
+### 形成BFC的常见条件
+- float不是none
+- position是absolute或fixed
+- overflow不是visible
+- display是flex inline-block等
+### BFC的常见应用
+- 清除浮动
 
-## float布局的问题，以及clearfix
+## 如何实现圣杯布局和双飞翼布局
+### 圣杯布局和双飞翼布局的目的
+- 三栏布局，中间一栏最先加载和渲染（内容最重要）
+- 两侧内容固定，中间内容随着宽度自适应
+- 一般用于PC网页
 
-## flex布局的问题
+### 圣杯布局和双飞翼布局的技术总结
+- 使用float布局
+- 两侧使用margin负值，以便和中间内容横向重叠
+- 防止中间内容被两侧覆盖，一个用padding（圣杯布局），一个用margin（双飞翼布局）
+
+## 手写clearfix
+
+## flex实现一个三点的色子
+Flex 是 Flexible Box的缩写，意为”弹性布局“，用来为盒状模型提供最大的灵活性。
+### flex常用语法（必须熟练掌握）
+#### 容器的属性
+- `flex-direction`：主轴（main axis）方向
+- `justify-content`：主轴对齐方式
+- `align-items`：交叉轴对齐方式
+- `flex-wrap`：是否换行
+#### 项目的属性
+- `align-self`：子元素在交叉轴上的对齐方式
