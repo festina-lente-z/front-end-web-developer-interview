@@ -1,5 +1,6 @@
 // 手写call
 Function.prototype.myCall = function(context, ...arg) {
+  // context == null 相当于 context === null || context === undefined
   if (context == null) {
     context = this
   } else {
@@ -15,6 +16,7 @@ Function.prototype.myCall = function(context, ...arg) {
   return res
 }
 
+// 借用mdn上的例子
 function greet(a,b) {
   var reply = [this.animal, 'typically sleep between', this.sleepDuration, a, b].join(' ');
   console.log(reply);
@@ -24,5 +26,4 @@ var obj = {
   animal: 'cats', sleepDuration: '12 and 16 hours'
 };
 
-greet.myCall(obj,'apple','banana');  // cats typically sleep between 12 and 16 hours
-
+greet.myCall(obj,'apple','banana');
