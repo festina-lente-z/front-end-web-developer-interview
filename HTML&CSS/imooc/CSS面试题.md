@@ -70,6 +70,8 @@ p {
 - display是flex inline-block等
 ### BFC的常见应用
 - 清除浮动
+- 去margin重叠
+- 实现更健壮、更智能的自适应布局
 
 ## 如何实现圣杯布局和双飞翼布局
 ### 圣杯布局和双飞翼布局的目的
@@ -81,7 +83,19 @@ p {
 - 使用float布局
 - 两侧使用margin负值，以便和中间内容横向重叠
 - 防止中间内容被两侧覆盖，一个用padding（圣杯布局），一个用margin（双飞翼布局）
+### 圣杯布局步骤
+0. 首先要设置宽度，center自适应，宽度为100%
+1. 把center,left,right设置成float:left
+2. footer清除浮动，可以给container创建一个bfc
+3. 给父元素container设置padding
+4. left,right设置margin负值
+5. 调整，position:relitive,right(当position设置为relative时，right属性指定了元素的右边界离开其正常位置的偏移)
 
+### 双飞翼布局步骤
+- 首先要设置宽度，center自适应，宽度为100%
+- center包裹一层div用于设置margin为两侧挪出位置
+- 把center,left,right设置成float:left
+- left,right设置margin负值（这里都是margin-left)
 ## 手写clearfix
 
 ## flex实现一个三点的色子

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>带回调的圆形动画</title>
+  <style>
+    .message-ball {
+      font-size: 20px;
+      line-height: 200px;
+      text-align: center;
+    }
+    .circle {
+      transition-property: width, height, margin-left, margin-top;
+      transition-duration: 2s;
+      position: fixed;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: red;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="go()">click me</button>
+
+  <script>
+    function go() {
+      showCircle(150, 150, 100, div => {
+        div.classList.add('message-ball')
+        div.append("hello world")
+      })
+    }
+
+    function showCircle(cx, cy, radius, callback) {
+      let div = documnet.createElement('div')
+      div.style
+    }
+  </script>
+</body>
+</html>

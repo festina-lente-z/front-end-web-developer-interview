@@ -11,14 +11,22 @@
       margin-top: 10px;
       margin-bottom: 15px;
     }
+    .bfc {
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
-  <p>AAA</p>
-  <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
-  <p>BBB</p>
+  <div class="bfc" style="background-color: grey;">
+    <p style="background-color: green;">AAA</p>
+    <!-- <p class="bfc"></p>
+    <p></p>
+    <p></p>
+    <p></p> -->
+    <div class="bfc">
+      <p style="background-color: hotpink;" >BBB</p>
+    </div>
+    <p style="background-color: indianred;">CCC</p>
+  </div>
 </body>
 </html>
