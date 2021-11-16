@@ -109,6 +109,9 @@ Flex 是 Flexible Box的缩写，意为”弹性布局“，用来为盒状模�
 #### 项目的属性
 - `align-self`：子元素在交叉轴上的对齐方式
 
+实现三点色子步骤：
+- 圆点用span（不用块级元素）
+
 # CSS定位
 ## absolute和relative分别依据什么定位？
 ### relative依据自身定位
