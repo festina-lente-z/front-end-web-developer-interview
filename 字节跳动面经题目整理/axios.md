@@ -1,0 +1,73 @@
+- [ ] axios发起请求时，如果登录失效怎么办
+- [ ] axios发送get和post请求有什么区别
+- [ ] 问了axios怎么用的，拦截器你都拦了点啥
+- [ ] 所有请求中增加一个字段，Axios怎么用
+- [ ] 对axios了解
+- [ ] 前端权限操作是什么方案？axios 自己封装了 XML，再次封装进行请求/响应拦截，发数据中间多了一层拦截
+- [ ] 提到了 axios 拦截器对吧，axios的相关特性有完整的了解吗？1.all 同时发很多个然后返回 2.底层还是 XML
+- [ ] 常见 axios 有哪几个阶段？readyState？
+- [ ] 怎么取消一个 axios 请求？（上传文件的请求打断）1.axios 封装取消的模块 2.原生的 XHR 取消一个请求？pending 的状态去掉？abor 中止请求，xhr.abort()
+- [ ] 为什么用axios
+- [ ] 为什么用axios而不是ajax？有什么优点？
+- [ ] axios的实现原理（1.原生XHR的封装2.Promise）
+- [ ] axios请求拦截器添加token（config.headers.Authorization=localStorage.token）
+- [ ] axios配置公共请求前缀 axios.default s.baseUrl
+- [ ] axios库底层代码有看嘛？怎么实现的
+- [ ] 你用到了axios，你是怎么处理响应结果的
+- [ ] axios的拦截器有哪些？（请求拦截器和响应拦截器）现在有两个请求拦截器A, B，两个响应拦截器A, B，它们的执行顺序？（请求拦截器B，请求拦截器A，响应拦截器A，响应拦截器B）为什么是这样的执行顺序？
+- [ ] 怎么去获取后端的数据，axios库是什么？跨域要怎样实现？（我说了后端要设置响应头，他说这样的话就不能上线了，如果后端关掉了怎么办，是变相问前端存储？然后我就说了cookie，但cookie也不安全）
+- [ ] axios的请求拦截token，响应拦截
+- [ ] axios拦截器
+- [ ] 用过axios的拦截器干了什么
+- [ ] Axios：基于promise对ajax的封装优点？
+- [ ] axios 使用，设置什么的过期时间
+- [ ] 封装了axios，axios怎么封装的，登录态怎么维护的，如果axios的功能使用原生ajax来做，那应该怎么去实现
+- [ ] 你的axios如何封装，了解原生fetch吗
+- [ ] axios用途
+- [ ] 项目中提到封装了axios，怎么封装的（介绍了async await结合axios的封装及其对xhr的封装）
+- [ ] 如果我多次触发某一个请求事件，怎么保证我最后拿到的内容是最新的（这个没答好，我说用节流的方法，但是面试官明显在问axios的取消请求，我只知道可以，没做过）
+- [ ] 除了axios还了解那些请求方法（回答了fetch，介绍了关注分离，promise风格，原生）
+- [ ] fetch怎么携带cookie（这个就不懂了..因为其他的axios的话只需要withCredentials 后来复盘的时候学到了fetch配置的credentials属性）
+- [ ] 对 axios 的分析，比如添加中间件的能力（我答的相响应劫持这类的）
+- [ ] 为什么用了axios库而不是原生的Ajax进行请求，对axios做了哪些封装，多了什么功能
+- [ ] 是否有看过axios源码，里面多了哪些功能
+- [ ] 用了什么中间件响应url路径（axios
+- [ ] Promise用法，封装axios？
+- [ ] Axios的设计模式有哪些？
+- [ ] axios返回的是一个什么对象
+- [ ] 用过 axios ，了解它吗？XMLHttpRequest 和 fetch 什么区别？fetch 为什么要多一步转换类型，猜一下？
+- [ ] Axios中终止请求是abort，是通过什么方法终止的？
+- [ ] Axios可以抽出中间件拦截请求等处理，有做过吗？
+- [ ] axios底层原理
+- [ ] axios的拦截机制
+- [ ] 项目中获取数据用的是axios吗，是直接用的还是对它进行了封装
+- [ ] 封装axios里有哪些操作
+- [ ] `axios` 封装限制连接池（异步问题，串行和并行， `async` 和 `await` ，结合 `leetcode 933` 作答）
+- [ ] fetch和axios的区别
+- [ ] axios拦截器，把token放到请求头里（不会）
+- [ ] axios和ajax区别
+- [ ] 如何实现axios
+- [ ] axios库原理
+- [ ] 项目中封装过axios吗?怎么封装的?
+- [ ] 说说axios,ajax,promise区别
+- [ ] axios 拦截器有什么区别？
+- [ ] axios请求方式的底层
+- [ ] axios拦截器的原理?
+- [ ] axios怎么区分客户端和服务器端的请求?
+- [ ] axios发送请求时携带cookie(项目里有用到axios)
+- [ ] Axios拦截器、了解内部实现吗？你从设计者的角度出发如何设计这个拦截器
+- [ ] 请求方式 ajax axios 原理（封装xhr) fetch
+- [ ] axios--底层使用了什么
+- [ ] 怎么判断用户是否是登陆状态，token存没存在，过没过期？Axios响应拦截器 请求拦截器
+- [ ] Axios是用什么封装的（基于promise，封装了ajax）
+- [ ] 那axios是怎样取消请求的
+- [ ] 用xhr手写axios（忘记API了，简单写了个promisify....）
+- [ ] 当我们输入www.baidu.com时与发送axios请求有什么区别么？X-Requested-With:'XMLHttpRequest'
+- [ ] axios和ajax区别
+- [ ] Axios底层是怎么实现的
+- [ ] axios发送网络请求为什么不会阻塞单线程
+- [ ] 基于axios封装的原理是什么？是自己封装的吗？----回答了 axios是基于promise对Ajax进行的封装，---手写 一下 基于promise的Ajax封装 function(url)
+- [ ] axios的封装，有在axios中实现过插件吗
+- [ ] axios向服务端请求时，什么时候会发两个请求？（主要是问options的作用）
+- [ ] 
+

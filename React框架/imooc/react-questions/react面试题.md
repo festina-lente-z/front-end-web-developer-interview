@@ -45,3 +45,6 @@
 - 利用context全局传值`React.createContext()`
 - 用一些全局机制实现，比如redux
 - 发布订阅模式，eventBus[event bus in React?](https://stackoverflow.com/questions/53329773/event-bus-in-react)
+
+## react组件生命周期
+## react父子组件生命周期
