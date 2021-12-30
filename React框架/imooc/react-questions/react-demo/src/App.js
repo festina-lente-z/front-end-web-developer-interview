@@ -1,10 +1,11 @@
 import React from 'react'
-import BaseUse from './components/baseUse'
+import Timer from './components/useRefDemo'
+import Timera from './components/useStateDemo'
 
 function App() {
   return (
     <div>
-      <BaseUse/>
+      <Timer/>
     </div>
   );
 }
