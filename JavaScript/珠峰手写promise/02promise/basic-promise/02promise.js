@@ -1,5 +1,5 @@
 const PENDING = 'PENDING'
-const RESOLVED = 'RESOLVED'
+const FULFILLED = 'FULFILLED'
 const REJECTED = 'REJECTED'
 // 每个promise有三个状态
 // then方法在原型上
@@ -10,12 +10,15 @@ class Promise {
     this.status = PENDING //默认是pending状态
     this.value = undefined // 成功的值
     this.reason = undefined // 失败的原因
+    this.onResolvedCallbacks = [] // 成功的回调的数组
+    this.onRejectedCallbacks = [] // 失败的回调的数组
     // 用箭头函数是为了保证this指向没问题
     // 成功函数
     let resolve = (value) => {
       if (this.status === PENDING) {
         this.value = value
-        this.status = RESOLVED
+        this.status = FULFILLED
+        this.onResolvedCallbacks.forEach(fn => fn())
       }
     }
     // 失败函数
@@ -23,6 +26,7 @@ class Promise {
       if (this.status === PENDING) {
         this.reason = reason
         this.status = REJECTED
+        this.onRejectedCallbacks.forEach(fn => fn())
       }
     }
     try {
@@ -32,8 +36,25 @@ class Promise {
       reject(e) // 如果执行时发生错误，等价于调用了失败方法
     }
   }
-  then(){
-
+  // 调用then的时候就知道了当前状态是成功还是失败
+  then(onfulfilled, onrejected){ // then目前有两个参数，一个是onfulfilled，一个是onrejected
+    // 同步
+    if (this.status === FULFILLED) {
+      onfulfilled(this.value)
+    }
+    if (this.status === REJECTED) {
+      onrejected(this.reason)
+    }
+    // 异步情况
+    if (this.status === PENDING) {
+      // 做切片
+      this.onResolvedCallbacks.push(() => {
+        onfulfilled(this.value)
+      })
+      this.onRejectedCallbacks.push(() => {
+        onrejected(this.reason)
+      })
+    }
   }
 }
 // 导出Promise类
